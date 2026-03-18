@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.project-card {
+    border: 1px solid #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    border-color: #fff;
+}
