@@ -3,141 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruv D Bhrasadiya - Portfolio</title>
+    <title>Dhruv D Bhrasadiya | Computer Vision Engineer</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Canvas for Neural Network Effect -->
+    <canvas id="canvas-bg"></canvas>
+    <div class="ambient-light"></div>
+
+    <!-- Header / Nav -->
     <header>
-        <h1>Dhruv D Bhrasadiya</h1>
+        <div class="logo">DHRUV</div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <p class="tag reveal delay-1">Hi, my name is</p>
+            <h1 class="reveal delay-2">Dhruv D Bhrasadiya.</h1>
+            <h3 class="reveal delay-3">I teach machines how to <span class="highlight">see</span>.</h3>
+            <p class="desc reveal delay-3">
+                I'm a Computer Engineering undergraduate specializing in Computer Vision, Deep Learning, and Machine Learning. My research focuses on transformer-based vision models, representation learning, and scalable training pipelines.
+            </p>
+            <a href="#projects" class="btn reveal delay-3">View My Work</a>
+        </section>
+
+        <!-- About & Core Expertise -->
+        <section id="about" class="reveal">
             <h2>About Me</h2>
-            <p>Computer Engineering undergraduate specializing in Computer Vision, Deep Learning, and Machine Learning. Research-oriented experience in transformer-based vision models, representation learning, and scalable training pipelines using PyTorch. Strong interest in open world perception, foundation models, and optimization dynamics of deep neural networks.</p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <h3>Languages</h3>
-            <p>Python, C++, C, Java, HTML, CSS, JavaScript, SQL</p>
-            <h3>Frameworks & Libraries</h3>
-            <p>PyTorch, TensorFlow, Keras, OpenCV, PyTorch Lightning, Hydra, Streamlit, Gradio, scikit-learn, torchvision, timm, pandas, NumPy, Xarray, pytest, Selenium</p>
-            <h3>Tools & Platforms</h3>
-            <p>Docker, TensorRT, Weights & Biases, TensorBoard, Hugging Face, MATLAB, Isaac Sim, ROS, Jetson Nano/Xavier, Ubuntu/Linux</p>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Satellite Forecasting Pipeline</h3>
-                <p>Data Engineering / Time-Series</p>
-                <ul>
-                    <li>Processed 5TB+ SEVIRI satellite imagery for temporal spatial forecasting tasks.</li>
-                    <li>Used Xarray + Dask for parallel data handling, improving I/O performance by 40%.</li>
-                    <li>Containerized data workflows using Docker for reproducibility and team collaboration.</li>
-                </ul>
-                <a href="#">Colab Link</a>
-            </div>
-            <div class="project-card">
-                <h3>FoodVision</h3>
-                <p>Deep Learning / ViT vs EffNetB2</p>
-                <ul>
-                    <li>Trained on 20% of Food101 with 101 classes using EffNetB2 + scratch ViT.</li>
-                    <li>Designed scalable training with regularization + tuned LR schedules.</li>
-                    <li>Achieved: ViT 97.22% acc, 85.8M params, 0.44s/pred.</li>
-                </ul>
-                <a href="#">HuggingFace Space</a>
-            </div>
-            <div class="project-card">
-                <h3>Interactive CV Training Tool</h3>
-                <p>Computer Vision / Education</p>
-                <ul>
-                    <li>Built a Streamlit based tool for interactive CNN training and live loss visualization.</li>
-                    <li>Integrated optimizers, schedulers, and dataset selection modules for experimentation.</li>
-                    <li>Enabled on-the-fly hyperparameter tuning, reducing model convergence time by 25%.</li>
-                </ul>
-                <a href="#">GitHub Link</a>
-            </div>
-            <div class="project-card">
-                <h3>AI-Powered Cricket Analytics</h3>
-                <p>Computer Vision / Pose Estimation</p>
-                <ul>
-                    <li>Used MediaPipe for real time skeleton keypoint extraction during batting motions.</li>
-                    <li>Developed form evaluation algorithms achieving 92% consistency with expert scoring.</li>
-                    <li>Built a visual Streamlit dashboard for playback based biomechanical feedback.</li>
-                </ul>
-                <a href="#">GitHub Link</a>
-            </div>
-            <div class="project-card">
-                <h3>TrashDetect</h3>
-                <p>Embedded AI / Transformer based Object Detection</p>
-                <ul>
-                    <li>Designed a DETR to detect trash disposal actions.</li>
-                    <li>Analyzed attention maps and bipartite matching loss behavior to understand object-query interactions.</li>
-                    <li>Evaluated model performance under varying dataset scales to study convergence dynamics and detection robustness.</li>
-                </ul>
-                <a href="#">GitHub Link</a>
-            </div>
-            <div class="project-card">
-                <h3>Vision Transformer Research Replication</h3>
-                <p>Deep Learning / Attention Models</p>
-                <ul>
-                    <li>Recreated the Vision Transformer architecture from scratch based on the original research paper.</li>
-                    <li>Implemented patch embedding, multi head self attention, positional encoding, and classification head.</li>
-                    <li>Conducted training experiments to understand scaling laws, attention behavior, and convergence.</li>
-                </ul>
-                <a href="#">Colab Notebook</a>
+            <div class="glass-box">
+                <p>Hello! I'm <strong>Dhruv</strong>, a researcher and developer passionate about open-world perception, foundation models, and the optimization dynamics of deep neural networks.</p>
+                <br>
+                <p>Currently pursuing my B.Tech in Computer Engineering at Vidyalankar Institute of Technology (2023 - 2027), I have delved deep into understanding how neural architectures behave under constraints. Whether I am experimenting with Vision Transformers from scratch, analyzing bipartite matching loss in object detection, or scaling models on parallel data pipelines, I thrive on demystifying black-box AI.</p>
             </div>
         </section>
 
-        <section id="experience">
+        <!-- Skills Section -->
+        <section id="skills" class="reveal">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="glass-box skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Javascript</span>
+                    </div>
+                </div>
+
+                <div class="glass-box skill-category">
+                    <h3>Frameworks & Libs</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">PyTorch Lightning</span>
+                        <span class="skill-tag">Hydra</span>
+                        <span class="skill-tag">timm</span>
+                        <span class="skill-tag">torchvision</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Xarray</span>
+                    </div>
+                </div>
+
+                <div class="glass-box skill-category">
+                    <h3>Tools & MLOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">TensorRT</span>
+                        <span class="skill-tag">W&B</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Isaac Sim / ROS</span>
+                        <span class="skill-tag">Jetson Nano</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="reveal">
             <h2>Experience</h2>
-            <div class="job">
-                <h3>Research Intern</h3>
-                <p>Veermata Jijabai Technological Institute (VJTI), Mumbai | May 2025 - July 2025</p>
-                <ul>
-                    <li>Designed and evaluated transformer based vision models for object detection, classification, and segmentation in simulated environments.</li>
-                    <li>Experimented with DINOv2, Grounding DINO, and attention-based architectures to analyze spatial reasoning and generalization behavior.</li>
-                    <li>Conducted structured ablation experiments to compare model performance under varying data and inference constraints.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>AI/ML Training Program</h3>
-                <p>L&T EduTech, Mumbai | June 2025</p>
-                <ul>
-                    <li>Completed industry driven AI/ML certification program covering model evaluation, bias mitigation, and ethics.</li>
-                    <li>Built supervised ML models achieving 95%+ accuracy on structured datasets.</li>
-                    <li>Delivered team project automating ML workflows with parameter tuning using Python and scikit-learn.</li>
-                </ul>
+            <div class="timeline">
+                <div class="timeline-item glass-box reveal delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2025 - July 2025</div>
+                    <div class="timeline-title">Research Intern</div>
+                    <div class="timeline-corp">Veermata Jijabai Technological Institute (VJTI), Mumbai</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Designed and evaluated transformer-based vision models for object detection, classification, and segmentation in simulated environments.</li>
+                            <li>Experimented with DINOv2, Grounding DINO, and attention-based architectures to analyze spatial reasoning and generalization behavior.</li>
+                            <li>Conducted structured ablation experiments to compare model performance under varying data and inference constraints.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item glass-box reveal delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 2025</div>
+                    <div class="timeline-title">AI/ML Trainee</div>
+                    <div class="timeline-corp">L&T EduTech, Mumbai</div>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Completed industry-driven AI/ML certification program covering model evaluation, bias mitigation, and ethics.</li>
+                            <li>Built supervised ML models achieving 95%+ accuracy on structured datasets.</li>
+                            <li>Delivered team project automating ML workflows with parameter tuning using Python and scikit-learn.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <h3>B.Tech in Computer Engineering</h3>
-            <p>Vidyalankar Institute of Technology, Mumbai | 2023 - 2027</p>
-            <p>CGPA: 8.5 / 10.0</p>
+        <!-- Projects Grid -->
+        <section id="projects" class="reveal">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card glass-box reveal delay-1">
+                    <div class="project-top">
+                        <i data-lucide="satellite" class="folder-icon"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i data-lucide="github"></i></a>
+                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Satellite Forecasting Pipeline</h3>
+                    <p class="project-desc">Processed 5TB+ SEVIRI satellite imagery for temporal-spatial forecasting tasks. Containerized workflows with Docker and used Xarray + Dask to parallelize data handling, boosting I/O by 40%.</p>
+                    <div class="project-tech">
+                        <span>Time-Series</span><span>Xarray</span><span>Docker</span><span>Dask</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-box reveal delay-2">
+                    <div class="project-top">
+                        <i data-lucide="aperture" class="folder-icon"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">TrashDetect</h3>
+                    <p class="project-desc">Designed a DETR model to detect trash disposal actions. Analyzed attention maps and bipartite matching loss behavior to deeply understand object-query interactions across dataset scales.</p>
+                    <div class="project-tech">
+                        <span>Transformer</span><span>DETR</span><span>Object Detection</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-box reveal delay-3">
+                    <div class="project-top">
+                        <i data-lucide="file-code-2" class="folder-icon"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">ViT Research Replication</h3>
+                    <p class="project-desc">Recreated the Vision Transformer architecture from scratch based on the original paper. Implemented patch embedding, MHA, positional encoding to study scaling laws and convergence.</p>
+                    <div class="project-tech">
+                        <span>PyTorch</span><span>ViT</span><span>Attention Models</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-box reveal delay-1">
+                    <div class="project-top">
+                        <i data-lucide="pizza" class="folder-icon"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FoodVision (ViT vs EffNetB2)</h3>
+                    <p class="project-desc">Trained on 101 classes using EffNetB2 + scratch ViT. Designed scalable training with regularization + tuned LR schedules. ViT reached 97.22% acc with 85.8M params.</p>
+                    <div class="project-tech">
+                        <span>Deep Learning</span><span>EffNetB2</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-box reveal delay-2">
+                    <div class="project-top">
+                        <i data-lucide="activity" class="folder-icon"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AI Cricket Analytics</h3>
+                    <p class="project-desc">Used MediaPipe to trace real-time skeleton keypoints during batting motions. Form evaluation algorithms hit 92% consistency with expert scoring, visualized via a Streamlit dashboard.</p>
+                    <div class="project-tech">
+                        <span>Pose Estimation</span><span>MediaPipe</span><span>Streamlit</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-box reveal delay-3">
+                    <div class="project-top">
+                        <i data-lucide="cpu" class="folder-icon"></i>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Interactive CV Training Tool</h3>
+                    <p class="project-desc">Built a Streamlit-based tool for interactive CNN training with live loss visualization, reducing hyperparameter tuning cycles and model convergence time by 25%.</p>
+                    <div class="project-tech">
+                        <span>Computer Vision</span><span>Education</span><span>CNN</span>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
-                <section id="contact">
-                    <h2>Contact</h2>
-                    <p>Email: <a href="mailto:dhruvbhrasadiya@gmail.com">dhruvbhrasadiya@gmail.com</a></p>
-                    <p>LinkedIn: <a href="#">https://www.linkedin.com/in/Dhruv-D-Bhrasadiya</a></p>
-                    <p>GitHub: <a href="#">https://github.com/Dhruv-D-Bhrasadiya/</a></p>
-                    <p>Phone: 7977219150</p>
-                </section>    </main>
+        <!-- Contact Section -->
+        <section id="contact" class="reveal">
+            <h2>Get In Touch</h2>
+            <div class="contact-sec glass-box">
+                <p>I am actively looking for internship and research opportunities relating to computer vision and deep learning starting in 2026. Whether you have a question, an idea, or just want to say hi, my inbox is always open!</p>
+                <a href="mailto:dhruvbhrasadiya@gmail.com" class="btn">Say Hello</a>
+                
+                <div class="contact-links">
+                    <a href="https://github.com/Dhruv-D-Bhrasadiya/" target="_blank">
+                        <i data-lucide="github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Dhruv-D-Bhrasadiya" target="_blank">
+                        <i data-lucide="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:dhruvbhrasadiya@gmail.com">
+                        <i data-lucide="mail"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+                <p style="margin-top: 1rem; color: var(--secondary); font-family: var(--font-mono); font-size: 0.9rem;">+91 7977219150</p>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <p>Built with precision by Dhruv D Bhrasadiya &copy; 2026</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
