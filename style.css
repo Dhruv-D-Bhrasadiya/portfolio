@@ -202,13 +202,17 @@ main {
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.hero-content {
+  margin: auto 0;
 }
 
 .hero h1 {
